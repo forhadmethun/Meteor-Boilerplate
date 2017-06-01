@@ -9,7 +9,18 @@ export default class SamplePage extends Component{
     console.log("SamplePage being rendered");
 
       return(
-        <SampleLayout content={<SampleComponent/>}/>
+        <SampleLayout
+
+            firstName="Gordon"
+            readBooks={[
+              { title: 'Liminal Thinking', author: 'Dave Gray' },
+              { title: 'Personal History', author: 'Katharine Graham' },
+              { title: 'Born Standing Up', author: 'Steve Martin' },
+            ]}
+            content={<SampleComponent/>}
+
+
+        />
       );
   }
 }

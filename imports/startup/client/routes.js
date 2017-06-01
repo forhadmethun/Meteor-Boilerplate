@@ -11,3 +11,32 @@ FlowRouter.route('/', {
       mount(SamplePage);
   }
 });
+
+
+FlowRouter.route( '/first', {
+    name: 'first',
+    action() {
+        // We'll render our components here.
+        console.log("first route is being called...");
+    }
+});
+
+
+FlowRouter.route( '/second', {
+    name: 'second',
+    action() {
+        // We'll render our components here.
+        console.log("second route is being called...");
+    }
+});
+
+
+FlowRouter.route( '/third', {
+    name: 'third',
+    action() {
+        // We'll render our components here.
+        console.log("third route is being called...");
+    }
+});
+
+

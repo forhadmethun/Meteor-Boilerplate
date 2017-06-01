@@ -24,8 +24,11 @@ export default class SampleLayout  extends Component{
               </div>
               <div className='row secondRow'>
                   <Sidebar/>
-                  <div className='three wide column'></div>
+                  <div className='three wide column'>
+                      <h1> Hi forhad!!!!!!!!!!!!!!!! </h1>
+                  </div>
                   <div className='thirteen wide column' style={{background: '#F7F7F7'}}>
+                      <h1> Hi forhad </h1>
                     {this.props.content}
                   </div>
               </div>
