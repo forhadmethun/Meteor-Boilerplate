@@ -123,8 +123,6 @@ export default class ShowTable extends React.Component {
                                 books={ BooksCollection.find({ read: false }).fetch() }
                                 isActive={ this.setActiveClassOnTab('read') }
                             />
-
-
                             : ' ' }
 
 
