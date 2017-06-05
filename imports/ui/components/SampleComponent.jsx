@@ -27,6 +27,7 @@ export default class SampleComponent extends Component{
   }
 
   render(){
+    console.log("sample Component is being renderred...");
     return(
       // <div>
       //   You have clicked {this.state.counter} times!

@@ -4,5 +4,6 @@ import { Meteor } from 'meteor/meteor';
 import { Books } from '../books';
 
 Meteor.publish('books', function() {
+    //console.log("Publication goes inside server is being renderred...");
     return Books.find();
 });

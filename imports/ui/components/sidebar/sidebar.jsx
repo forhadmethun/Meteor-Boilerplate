@@ -6,9 +6,10 @@ export default class Sidebar extends React.Component{
         return(
           <div className='three wide column sideBar'>
             <ul className='sideBarMenu'>
-              <li><a href='#' className='activeMenu'><i className='file text outline icon'></i> First Item</a></li>
-              <li><a href='#'><i className='file text outline icon'></i> Second Item</a></li>
-              <li><a href='#'><i className='file text outline icon'></i> Third Item</a></li>
+              <li><a href='http://localhost:3000/home'><i className='file text outline icon'></i> Home </a></li>
+              <li><a href='http://localhost:3000/insert'><i className='file text outline icon'></i> Insert</a></li>
+              <li><a href='http://localhost:3000/show'><i className='file text outline icon'></i> Show</a></li>
+              <li><a href='http://localhost:3000/table'><i className='file text outline icon'></i> Table </a></li>
             </ul>
           </div>
         )

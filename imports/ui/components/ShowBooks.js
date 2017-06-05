@@ -1,8 +1,8 @@
 import React from 'react';
 import BooksList from './BooksList';
 import AddBook from './AddBook';
-
-export default class Books extends React.Component {
+import { Books as BooksCollection } from '../../api/books/books.js';
+export default class ShowBooks extends React.Component {
     constructor(props) {
         super(props);
         this.state = { activeTab: 'read' };
@@ -19,13 +19,8 @@ export default class Books extends React.Component {
     }
 
     render() {
-        console.log("Components//Book is being renderred...");
-        return (
+        return (<div className="Books">
 
-
-            <div className="Books">
-            <h4>{`${this.props.firstName}'s`} Books</h4>
-            <AddBook />
 
             <ul className="tabs clearfix">
                 <li onClick={ this.handleChangeTabs } className={`tab ${this.setActiveClassOnTab('read')}`} data-tab="read">Read</li>
@@ -34,18 +29,15 @@ export default class Books extends React.Component {
             <div className="tabs-data">
                 <BooksList
                     type="read"
-                    books={ this.props.readBooks }
+                    books={ BooksCollection.find({ read: true }).fetch() }
                     isActive={ this.setActiveClassOnTab('read') }
                 />
                 <BooksList
                     type="unread"
-                    books={ this.props.unreadBooks }
+                    books={ BooksCollection.find({ read: false }).fetch() }
                     isActive={ this.setActiveClassOnTab('unread') }
                 />
             </div>
-        </div>
-
-
-        );
+        </div>);
     }
 }
